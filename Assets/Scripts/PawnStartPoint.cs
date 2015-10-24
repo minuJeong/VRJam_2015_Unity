@@ -1,0 +1,15 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class PawnStartPoint : MonoBehaviour
+{
+	public GameObject PawnPrefab;
+
+	// Use this for initialization
+	void Start ()
+	{
+		if (null != PawnPrefab) {
+			Instantiate (PawnPrefab);
+		}
+	}
+}
