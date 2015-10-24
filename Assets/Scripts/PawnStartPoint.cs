@@ -8,8 +8,8 @@ public class PawnStartPoint : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		if (null != PawnPrefab) {
-			Instantiate (PawnPrefab);
+		if (null == GameObject.FindObjectOfType<Pawn> () && null != PawnPrefab) {
+			Instantiate <GameObject> (PawnPrefab).transform.SetParent (transform);
 		}
 	}
 }
